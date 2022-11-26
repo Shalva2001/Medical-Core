@@ -1,4 +1,4 @@
-/* Reset Styles */
+
 * {
 	padding: 0;
 	margin: 0;
@@ -12,7 +12,7 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
-/* ----------------------- */
+
 body {
 	overflow-x: hidden;
 	min-height: max-content;
@@ -67,6 +67,8 @@ html {
 .navigation.active {
 	transform: translateX(0);
 	opacity: 1;
+	z-index: -1;
+
 }
 .navigation ul {
 	display: flex;
@@ -280,20 +282,3 @@ html {
 		gap: 10px;
 	}
 }
-/* @media (max-width: 830px) {
-	.main-text h5 {
-		font-size: 20px;
-		transition: 0.3s;
-	}
-	.main-text h1 {
-		font-size: 50px;
-		transition: 0.3s;
-	}
-	.main-text h4 {
-		font-size: 16px;
-		transition: 0.3s;
-	}
-}
-
-@media (max-width: 443px) {
-} */
