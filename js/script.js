@@ -5,10 +5,18 @@ hamburgerMenu.addEventListener('click', () => {
 	navigation.classList.toggle('active');
 });
 
-var swiper = new Swiper('.mySwiper', {
-	slidesPerView: 3,
-	spaceBetween: 30,
-	slidesPerGroup: 3,
+const getSlidesPerView = () => {
+	width = window.innerWidth;
+	if (width < 420) {
+		return 1;
+	} else if (width < 760) {
+		return 2;
+	} else return 3;
+};
+
+const swiper = new Swiper('.mySwiper', {
+	slidesPerView: getSlidesPerView(),
+	spaceBetween: 10,
 	loop: true,
 	loopFillGroupWithBlank: true,
 	pagination: {
@@ -19,6 +27,4 @@ var swiper = new Swiper('.mySwiper', {
 		nextEl: '.swiper-button-next',
 		prevEl: '.swiper-button-prev',
 	},
-
-
 });
