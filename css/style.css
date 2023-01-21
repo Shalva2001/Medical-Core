@@ -541,6 +541,9 @@ html {
 	.services-box-container {
 		width: 100%
 	}
+	.footer-container{
+		flex-direction: column;
+	}
 
 }
 
@@ -705,7 +708,6 @@ footer{
     display:flex;
     justify-content: space-between;
     align-items: flex-start;
-	flex-direction: column;
 }
 .footer-company-box{
     max-width: 330px;
