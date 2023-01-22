@@ -1,5 +1,12 @@
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const navigation = document.querySelector('.navigation');
+const consultationBtn = document.querySelectorAll('.consult');
+
+consultationBtn.forEach((element) => {
+	element.addEventListener('click', () => {
+		window.location.href = '../pages/Login.html';
+	});
+});
 
 hamburgerMenu.addEventListener('click', () => {
 	navigation.classList.toggle('active');
@@ -18,7 +25,6 @@ const swiper = new Swiper('.mySwiper', {
 	slidesPerView: getSlidesPerView(),
 	spaceBetween: 10,
 	loop: true,
-	loopFillGroupWithBlank: true,
 	pagination: {
 		el: '.swiper-pagination',
 		clickable: true,
@@ -29,26 +35,21 @@ const swiper = new Swiper('.mySwiper', {
 	},
 });
 
-var swiper2 = new Swiper(".mySwiperservices", {
+var swiper2 = new Swiper('.mySwiper', {
 	slidesPerView: 1,
 	spaceBetween: 20,
-	pagination: {
-	  el: ".swiper-pagination",
-	  clickable: true,
-	},
-	
 	breakpoints: {
-	  560: {
-		slidesPerView: 2,
-		spaceBetween: 20,
-	  },
-	  950: {
-		slidesPerView: 3,
-		spaceBetween: 40,
-	  },
-	  1250: {
-		slidesPerView: 3,
-		spaceBetween: 40,
-	  },
+		560: {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		},
+		950: {
+			slidesPerView: 3,
+			spaceBetween: 40,
+		},
+		1250: {
+			slidesPerView: 3,
+			spaceBetween: 40,
+		},
 	},
-  });
+});
