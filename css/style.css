@@ -89,7 +89,23 @@ html {
 .navigation ul li a:hover {
 	color: #1ba0ab;
 }
-
+.navigation ul ul {
+	
+	position: absolute;
+	top: 72px;
+	display: none;
+	width: 110px;
+	background-color: #b4b2b2;
+	border-radius: 10px;
+}
+.navigation ul li:hover> ul {
+	display: block;
+}
+.navigation ul ul li {
+	float: none;
+	display: list-item;
+	position: relative;
+}
 .navigation ul .btn {
 	background: #1ba0ab;
 	color: wheat;
@@ -684,6 +700,7 @@ html {
 	opacity: 0.7;
 	color: #1ba0ab;
 	transition: all 0.3s ease;
+	display: none !important;
 }
 .swiper-button-next:hover,
 .swiper-button-prev:hover {

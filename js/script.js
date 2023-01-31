@@ -24,15 +24,6 @@ const getSlidesPerView = () => {
 const swiper = new Swiper('.mySwiper', {
 	slidesPerView: getSlidesPerView(),
 	spaceBetween: 10,
-	loop: true,
-	pagination: {
-		el: '.swiper-pagination',
-		clickable: true,
-	},
-	navigation: {
-		nextEl: '.swiper-button-next',
-		prevEl: '.swiper-button-prev',
-	},
 });
 
 var swiper2 = new Swiper('.mySwiper', {
