@@ -1,16 +1,17 @@
 const hamburgerMenu = document.querySelector('.hamburger-menu');
 const navigation = document.querySelector('.navigation');
-const consultationBtn = document.querySelectorAll('.consult');
-
-consultationBtn.forEach((element) => {
-	element.addEventListener('click', () => {
-		window.location.href = '../pages/Login.html';
-	});
-});
+const toTop = document.querySelector(".to-top");
 
 hamburgerMenu.addEventListener('click', () => {
 	navigation.classList.toggle('active');
 });
+window.addEventListener("scroll", () => {
+	if (window.pageYOffset > 100) {
+	  toTop.classList.add("active");
+	} else {
+	  toTop.classList.remove("active");
+	}
+  })
 
 const getSlidesPerView = () => {
 	width = window.innerWidth;
@@ -26,21 +27,23 @@ const swiper = new Swiper('.mySwiper', {
 	spaceBetween: 10,
 });
 
-var swiper2 = new Swiper('.mySwiper', {
+var swiper2 = new Swiper(".mySwiperservices", {
 	slidesPerView: 1,
-	spaceBetween: 20,
-	breakpoints: {
-		560: {
-			slidesPerView: 2,
-			spaceBetween: 20,
-		},
-		950: {
-			slidesPerView: 3,
-			spaceBetween: 40,
-		},
-		1250: {
-			slidesPerView: 3,
-			spaceBetween: 40,
-		},
+	spaceBetween: 10,
+	navigation: {
+	  nextEl: ".swiper-button-next",
+	  prevEl: ".swiper-button-prev",
 	},
-});
+	breakpoints: {
+	  700: {
+		slidesPerView: 2,
+		spaceBetween: 40,
+	  },
+	  1024: {
+		slidesPerView: 3,
+		spaceBetween: 50,
+	  },
+	},
+  });
+  
+  
