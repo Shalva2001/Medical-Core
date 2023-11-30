@@ -76,9 +76,10 @@ html {
 	display: flex;
 	width: 100%;
 	justify-content: center;
-	align-items: center;
+	align-items: start;
 	height: max-content;
 	gap: 15px;
+
 }
 
 .navigation ul li a {
